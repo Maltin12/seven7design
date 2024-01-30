@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!--
+Template Name: Besloor
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Seven7Design</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+    /* Add your custom styles here */
+
+    body, html {
+  padding: 0;
+  /* This ensures there is no space around the edges of the page */
+}
+
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 50px;
+    }
+  
+    /* Sticky header style */
+    .sticky-header {
+      position: fixed;
+      width: 100% !important;
+      z-index: 10;
+    }
+  
+    /* Scroll indicator style */
+    .scroll-downs {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: black;
+      cursor: pointer;
+    }
+  
+    .scroll-downs .mousey {
+      width: 25px;
+      padding: 10px;
+      height: 47px;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      opacity: 0.75;
+      box-sizing: content-box;
+    }
+  
+    .scroll-downs .scroller {
+      width: 3px;
+      height: 10px;
+      border-radius: 25%;
+      background-color: #fff;
+      animation-name: scroll;
+      animation-duration: 2.2s;
+      animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+      animation-iteration-count: infinite;
+    }
+
+    /* Reset margin and padding for all elements */
+
+/* Sticky header styles */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure it stretches to the right edge */
+  width: 100vw; /* Use viewport width to ensure it covers full width of the viewport */
+  z-index: 1000; /* To keep it above other content */
+}
+
+/* Ensure the logo and navigation take full width */
+
+/* Fix for the navigation items */
+#mainav ul {
+  display: flex; /* Use flexbox for even spacing */
+  justify-content: space-between; /* Add space between the navigation items */
+  list-style-type: none; /* Remove default list styling */
+}
+
+#mainav ul li a {
+  color: #ffffff; /* Change color as needed */
+  text-decoration: none; /* Remove underline from links */
+}
+
+#mainav ul li a:hover, #mainav ul li.active a {
+  color: #DC8E47; /* Change the color for hover and active state */
+}
+
+/* Initial styles for the logo and navigation items */
+#logo h1 a, #mainav ul li a {
+  color: #ffffff; /* white color initially */
+  transition: color 0.3s ease; /* smooth transition for color change */
+}
+
+/* Style for the header when the .scrolled class is added */
+/* Styles for the logo and navigation items when the .scrolled class is added */
+.sticky-header.scrolled #logo h1 a, .sticky-header.scrolled #mainav ul li a {
+  color: #000000 !important; /* black color when scrolled */
+  
+}
+.sticky-header.scrolled #mainav ul li a:hover {
+    color: #DC8E47 !important
+}
+.sticky-header.scrolled{
+    border-color: rgba(255,255,255,.2) !important; 
+}
+
+    /* Change header link colors on scroll */
+/* This class will change the color of the links to black when added to the header */
+/* Default navigation link color */
+#mainav ul li a::after {
+  color: black; /* or your default color */
+  transition: color 0.3s ease-in-out;
+}
+#logo a::after {
+    color: #000 !important;
+}
+
+.wrapper.row1 {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  /* This can help pull the element to cover the full viewport width */
+}
+
+
+/* Sticky header background and link color change */
+.sticky-header #mainav ul li a {
+  transition: color 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: #323232;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+.heading-title {
+    margin-bottom: 100px;
+}
+.text-center {
+    text-align: center;
+}
+.heading-title h3 {
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.half-txt {
+    width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 25px;
+    color: #7e7e7e;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.team-member, .team-member .team-img {
+    position: relative;
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.team-member:hover .team-hover .desk {
+    top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member .s-link a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+
+
+  
+    @keyframes scroll {
+      0% { opacity: 0; }
+      10% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(15px); opacity: 0;}
+    }
+    </style>
+</head>
+
+
+<body id="top">
+
+    <!-- Top Background Image Wrapper -->
+    <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/image0.jpeg');"> 
+      <!-- Header -->
+      <div class="wrapper row1">
+        <header id="header" class="hoc clear"> 
+          <div id="logo" class="fl_left">
+            <h1><a href="index.html">Seven7Design</a></h1>
+          </div>
+          <nav id="mainav" class="fl_right">
+            <ul class="clear">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Projects</a></li>
+              <li class="active"><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      
+      <!-- Page Intro -->
+      <div id="pageintro" class="hoc clear"> 
+        <article>
+          <h3 class="heading">ABOUT US</h3>
+          <p>Our Road to success. </p>
+          <footer>
+          </footer>
+        </article>
+      </div>
+    </div>
+
+    <main>
+      
+        <!-- Mission Section -->
+        <section id="mission" class="section">
+          <div class="animate__animated animate__fadeInUp">
+            <h2 class="heading underline font-x2">Our Mission</h2>
+            <p>At Seven7Design, we aim to provide innovative and sustainable design solutions...</p>
+          </div>
+        </section>
+      
+        <!-- History Section -->
+        <section id="history" class="section bg-light">
+          <div class="animate__animated animate__fadeIn">
+            <h2 class="heading underline font-x2">Our History</h2>
+            <p>Founded in 2010, Seven7Design has grown from a small local firm...</p>
+          </div>
+        </section>
+      
+        <!-- Team Section -->
+        <section id="team" class="section">
+          <div class="animate__animated animate__fadeInUp">
+            <h2 class="heading underline font-x2">Meet The Team</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="heading-title text-center">
+                        <h3 class="text-uppercase">Our professionals </h3>
+                        <p class="p-top-30 half-txt">Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="https://image.freepik.com/free-photo/man-standing-with-a-black-t-shirt_1187-1045.jpg" alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>Hi There !</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-title">
+                            <h5>Martin Smith</h5>
+                            <span>founder & ceo</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="https://image.freepik.com/free-photo/elegant-man-with-thumbs-up_1149-1595.jpg" alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>Hello World</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-title">
+                            <h5>Franklin Harbet</h5>
+                            <span>HR Manager</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="https://image.freepik.com/free-photo/well-dressed-executive-with-crossed-arms_1098-3930.jpg" alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>I love to design</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-title">
+                            <h5>Linda Anderson</h5>
+                            <span>Marketing Manager</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+          </div>
+        </section>
+
+        <div class="wrapper row4">
+            <footer id="footer" class="hoc clear"> 
+              <h2 class="heading">Contact Us</h2>
+              <div class="one_half first">
+                <ul class="nospace linklist contact">
+                  <li><i class="fas fa-map-marker-alt"></i>
+                    <address>
+                      Street Name & Number, Town, Postcode/Zip
+                    </address>
+                  </li>
+                  <li><i class="fas fa-phone"></i> +00 (123) 456 7890</li>
+                  <li><i class="far fa-envelope"></i> info@domain.com</li>
+                </ul>
+                <br>
+                <ul class="faico clear">
+                  <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a class="faicon-instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+              </div>
+              <div class="one_half">
+                <form method="post" action="#" class="contact-form">
+                  <fieldset>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" title="Send">Send Message</button>
+                  </fieldset>
+                </form>
+              </div>
+            </footer>
+          </div>
+          <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+          <!-- JAVASCRIPTS -->
+          <script src="layout/scripts/jquery.min.js"></script>
+          <script src="layout/scripts/jquery.backtotop.js"></script>
+          <script src="layout/scripts/jquery.mobilemenu.js"></script>
+          </body>
+          </html>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-downs">
+          <div class="mousey">
+            <div class="scroller"></div>
+          </div>
+        </div>
+      </main>
+    <!-- Scripts for animation -->
+    <script>
+    // Use jQuery for scroll animations
+    $(document).ready(function(){
+      // Smooth scrolling for scroll down indicator
+      $('.scroll-downs').click(function(){
+        $('html, body').animate({
+          scrollTop: $(window).scrollTop() + $(window).height()
+        }, 800);
+      });
+    
+      // Add sticky header functionality
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100){  
+            $('.row1').addClass("sticky-header");
+        }
+        else{
+            $('.row1').removeClass("sticky-header");
+        }
+      });
+    });
+
+    $(document).ready(function(){
+  // On scroll, add or remove the sticky-header class based on position
+  $(window).scroll(function() {
+    var header = $('#header'); // Get the header
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 100) { // Set the scroll value you want
+      header.addClass('sticky-header');
+    } else {
+      header.removeClass('sticky-header');
+    }
+  });
+});
+
+$(document).ready(function() {
+  // Function to add 'scrolled' class to the header after scrolling
+  $(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+    if (scrollDistance > 400) { // more than 50px from top
+      $('.sticky-header').addClass('scrolled');
+    } else {
+      $('.sticky-header').removeClass('scrolled');
+    }
+  });
+});
+
+
+    </script>
